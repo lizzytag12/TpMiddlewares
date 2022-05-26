@@ -1,0 +1,2 @@
+//informacion que se guarda en el servidorel usuario ingreso a la ruta
+
