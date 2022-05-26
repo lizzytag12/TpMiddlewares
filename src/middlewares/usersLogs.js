@@ -9,11 +9,15 @@ const fs = require('fs'); // requiero un modulo que me permita manipular archivo
  * @param res - The response object.
  * @param next - This is a function that you call when you want to move on to the next middleware.
  */
+
+
 const userLogs = (req,res,next)=>{
+   /*  console.log(req.url); */ // <= usando el "req" rescato la ruta 
      // apenFileSync = metodo que agrega algo dentro de un archivo. con path le indico donde agregar lo que necesito-
     fs.appendFileSync(path.resolve(__dirname , '..', 'logs', 'userLogs.txt'), // <= donde lo quiero guardar
-    "el usuario ingreso a la ruta") // <= lo que quiero agregar en el archivo
-
+    "el usuario ingreso a la ruta"+ req.url + '\n'  
+    ) // <= lo que quiero agregar en el archivo
+    next() // metodo que me permite seguir
 
 }
 
