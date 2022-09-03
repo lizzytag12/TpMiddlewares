@@ -11,3 +11,14 @@ h1{
 
   margin : 1em
 }
+#navbarNav{
+  justify-content: center;
+}
+.nav-item{
+
+  margin: 0 1rem;
+}
+.container_image{
+  display: block;
+  text-align: center;
+}
